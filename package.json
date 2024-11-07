@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
+    "execTS": "ts-node",
     "start": "ts-node src/index.ts",
     "dev": "nodemon"
   },
@@ -20,6 +21,7 @@
     "@types/express": "^5.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "joi": "^17.13.3",
     "mongoose": "^8.8.0"
   }
 }

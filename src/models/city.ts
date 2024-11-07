@@ -6,11 +6,14 @@ const citySchema = new Schema<Icity>(
 		name: {
 			type: String,
 			required: true,
+			unique: true,
 		},
 	},
 	{
 		timestamps: true,
+		versionKey: false
+		
 	}
 )
 
-export const city = model<Icity>("cities", citySchema)
+export const city = model<Icity>("cities", citySchema) 

@@ -1,6 +1,9 @@
-import express from "express"
-import { addCity } from "../controllers/cityController"
+import express, { IRouter } from "express"
+import { addCity, listCities } from "../controllers/cityController"
+import { validate } from "../middlewares/validator"
+import { citySchema } from "../schemas/validationSchema"
 const router = express.Router()
 
-router.get("/",addCity)
+router.post("/city",validate(citySchema) ,addCity)
+router.get("/city" ,listCities)
 export default router
